@@ -1,0 +1,45 @@
+/* NAvigation bar styling */
+.github-one {
+    width: 3vw;
+  }
+  
+  .form-control input {
+    width: fit-content;
+    display: flex;
+  }
+  
+  .input-space {
+    width: 45vw;
+    border-radius: 10vw;
+    
+    border: 1px solid #0077B6;
+    box-shadow: none;
+    display: block;
+ 
+  }
+  
+  .first-buttons {
+    width: 10vw;
+    border-color: #0096C7;
+    background-color: #0077B6;
+    box-shadow: none;
+    color: #E5E5E5;
+  }
+  .second-title{
+    color: #03045E;
+}
+.search-space{
+    position: relative;
+    width: 45vw;
+}
+.search-space button{
+    position: absolute;
+    background: transparent;
+    border: none;
+    right: 1vw;
+    top: 1vh;
+    
+}
+.search-image{
+    height: 3vh;
+}
