@@ -1,0 +1,52 @@
+.main-container{
+    height: 100vh;
+    width:100vw;
+}
+.github-one{
+    width:15vw;
+}
+.input-space{
+    width:45vw;
+    padding: 1rem;
+    display: block;
+    border-radius: 10vw;
+    position: relative;
+    border-color: #0077B6;
+    box-shadow: none;
+}
+
+.m-glass{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.top-left{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 50%;
+}
+.bottom-right{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 50%;
+}
+.main{
+    margin-top: -10vh;
+}
+.search-space{
+    position: relative;
+    width: 45vw;
+}
+.search-space button{
+    position: absolute;
+    background: transparent;
+    border: none;
+    right: 1vw;
+    top: 1vh;
+    
+}
+.search-image{
+    height: 5vh;
+}
