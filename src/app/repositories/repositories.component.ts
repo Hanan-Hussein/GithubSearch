@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GitInfoService } from '../git-info.service';
 
 @Component({
   selector: 'app-repositories',
@@ -6,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./repositories.component.css']
 })
 export class RepositoriesComponent implements OnInit {
-
-  constructor() { }
+  repos:any;
+  constructor(private gitinfo:GitInfoService) { }
 
   ngOnInit(): void {
+    this.repos = this.gitinfo.totalRepos
+    console.log('gfsdg',this.repos);
   }
 
 }

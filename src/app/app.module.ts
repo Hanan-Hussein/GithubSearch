@@ -8,6 +8,7 @@ import { NavigationBarComponent } from './navigation-bar/navigation-bar.componen
 import { RepositoriesComponent } from './repositories/repositories.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { MonthCounterPipe } from './month-counter.pipe';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { HttpClientModule } from '@angular/common/http';
     LandingPageComponent,
     UserResultPageComponent,
     NavigationBarComponent,
-    RepositoriesComponent
+    RepositoriesComponent,
+    MonthCounterPipe
   ],
   imports: [
     BrowserModule,
