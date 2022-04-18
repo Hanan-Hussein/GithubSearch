@@ -17,8 +17,8 @@ export class GitInfoService {
   ) {
     this.userSkeleton = new UserSkeleton("", 0, 0, 0, "", "", new Date(), "", "", "", "");
 
-   }
-    userApi(url: string) {
+  }
+  userApi(url: string) {
     // this.repos.length=0
     this.HttpProcessor.fetchApi(`${url}?`).subscribe((response) => {
       // console.log(response);
@@ -37,6 +37,6 @@ export class GitInfoService {
 
     });
 
- 
+
   }
 }
