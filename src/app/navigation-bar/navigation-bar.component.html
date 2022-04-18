@@ -1,19 +1,20 @@
   <!-- Navigation bar -->
   <div class=" container navigation-bar mt-3">
     <div class="title d-flex align-items-end">
-      <img src="../../assets/github-one.svg" class="github-one d-inline" alt="">
+      <img src="../../assets/github-one.svg" class="github-one d-inline" (click)="home()" alt="">
       <p class="h4 d-inline ms-4 second-title">Github Search</p>
     </div>
   </div>
 
-  <form action="" class="container d-flex align-items-center justify-content-start my-4">
+  <form action="" class="container nav-container d-flex align-items-center justify-content-start my-4">
     <div class="form-group search-space">
-      <input type="text" class="form-control p-2 input-space me-5 " placeholder="search users,repos ... ">
+      <input type="text" class="form-control p-2 input-space me-5 " placeholder="search users,repos ... " name="inputData" [(ngModel)]="inputData">
       <button>
         <!-- <ion-icon name=search-outline"></ion-icon> -->
         <img src="../../assets/Union.svg" class="search-image" alt="">
       </button>
     </div>
-    <button class="btn btn-outline-success me-5 first-buttons ms-5 ">Users</button>
-    <button class="btn btn-outline-success first-buttons">Repositories</button>
+    <button (click)="userSearch()" class="btn btn-outline-success me-5 first-buttons ms-5 ">Users</button>
+    <button (click)="repoSearch()"  class="btn btn-outline-success first-buttons me-5" >Repositories</button>
+    <img src="../../assets/home-outline.svg" class="home ms-5" alt="" (click)="home()" >
   </form>

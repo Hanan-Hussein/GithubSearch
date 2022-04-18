@@ -35,7 +35,7 @@ export class UserResultPageComponent implements OnInit {
     console.log("repo", this.repo);
 
     this.user.push(this.users)
-    // console.log(this.user);
+    console.log("xxxxxxxxxxxxxxx",this.user);
 
   }
   redirection(url: any) {

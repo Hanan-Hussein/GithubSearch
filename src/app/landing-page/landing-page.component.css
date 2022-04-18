@@ -24,13 +24,13 @@
     position: absolute;
     top: 0;
     left: 0;
-    height: 50%;
+    height: 55vh;
 }
 .bottom-right{
     position: absolute;
     right: 0;
     bottom: 0;
-    height: 50%;
+    height: 55vh;
 }
 .main{
     margin-top: -10vh;
@@ -49,4 +49,25 @@
 }
 .search-image{
     height: 5vh;
+}
+@media only screen and (max-width:700px){
+    .top-left{
+        height: 25vh;
+    }
+    .bottom-right{
+        height: 25vh;
+    }
+    .search-space{
+        width: 80vw;
+    }
+    .search-image{
+        display: none;
+    }
+    .search-space{
+        width: fit-content
+        
+    }
+    .first-buttons{
+        width: max-content;
+    }
 }

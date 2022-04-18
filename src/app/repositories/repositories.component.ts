@@ -12,7 +12,7 @@ export class RepositoriesComponent implements OnInit {
 
   ngOnInit(): void {
     this.repos = this.gitinfo.totalRepos
-    console.log('gfsdg',this.repos);
+    
   }
 
 }

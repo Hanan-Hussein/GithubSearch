@@ -21,7 +21,7 @@ export class GitInfoService {
 
   }
   userApi(url: string) {
-    this.repos.length=0
+    this.repos.length=0;
     this.HttpProcessor.fetchApi(`${url}?`).subscribe((response) => {
       // console.log(response);
       this.userSkeleton.name = response.login;
@@ -50,6 +50,8 @@ export class GitInfoService {
 
   }
   userRepoSearch(url: string) {
+    this.totalRepos.length=0
+
     this.HttpProcessor.fetchApi(url).subscribe((response) => {
       console.log(response)
       let allReposList: any;

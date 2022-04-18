@@ -1,24 +1,37 @@
 <div class="main-container">
   <app-navigation-bar></app-navigation-bar>
-  <div class="container repos" >
-    <p class="h5 text-center mt-5">Repositories</p>
-    <div class="repo-carrier container bg-light p-2 my-2" *ngFor="let rep of repos">
-      <div class="repo d-flex justify-content-between align-items-center">
-        <div class="left">
-          <p class="lead">{{rep.name}} Project</p>
-          <p class="desc">{{rep.description}}</p>
-          <p class="text-muted">{{rep.cloneURL}}</p>
-          <p>By : {{rep.author}}</p>
-          <p class="text-muted"> {{rep.created_at|monthCounter}} </p>
-          <p class="viewer text-decoration-underline"><a href={{rep.htmlURL}} target="_blank" class="link-secondary">VIEW</a></p>
-        </div>
-        <div class="right text-center"> 
-          <p class="floaters p-3 bg-success me-5 ">{{rep.forks}} Forks</p>
-          <p class="floaters p-3 bg-success mx-5">{{rep.stargazer}} Stars</p>
-          <p class="floater p-3 bg-success ms-5">{{rep.watchers}} Watchers</p>
-
+  <div class="container repos" *ngIf="repos.length !== 0; else error" >
+    <p class="h5 text-center mt-5" appUnknownSearch>Repositories</p>
+    <div >
+      <div class="repo-carrier container  p-2 my-2" *ngFor="let rep of repos">
+        <div class="repo d-flex justify-content-between align-items-center">
+          <div class="left">
+            <p class="lead">{{rep.name}} Project</p>
+            <p class="desc">{{rep.description}}</p>
+            <p class="text-muted">{{rep.cloneURL}}</p>
+            <p>By : {{rep.author}}</p>
+            <p class="text-muted">Created {{rep.created_at|monthCounter}} </p>
+            <p class="viewer text-decoration-underline"><a href={{rep.htmlURL}} target="_blank" class="link">VIEW</a>
+            </p>
+          </div>
+          <div class="right text-center">
+            <p class="floaters p-3  me-5 ">{{rep.forks}} Forks</p>
+            <p class="floaters p-3 mx-5">{{rep.stargazer}} Stars</p>
+            <p class="floater p-3  ms-5">{{rep.watchers}} Watchers</p>
+          </div>
         </div>
       </div>
     </div>
   </div>
+    <ng-template #error>
+      <div class="container d-flex align-items-center justify-content-center">
+        <div class="div">
+          <p class="display-6">Looking for Your Repo</p>
+        </div>
+        <div class="div">
+          <img src="../../assets/7Iy6.gif" class="looking" alt="">
+        </div>
+      </div>
+    </ng-template>
+  
 </div>
