@@ -20,5 +20,15 @@
     </div>
   </div>
   <!-- Repositories Section -->
-
+  <p class="h5 text-center mt-5">Latest Repositories</p>
+  <div class="container repositories-section " *ngFor="let repo of repo">
+    <div class="repository my-3 p-5 d-flex align-items-center justify-content-between text-center">
+      <p class="repo-name"><span>{{repo.name}}</span> Project</p>
+      <div class="d-flex justify-content-around">
+        <p class="repo-info text-center h-5 p-3 mx-5"><span>{{repo.forks}}</span> Forks</p>
+        <p class="repo-info text-center h-5 p-3 mx-5"><span>{{repo.watchers}}</span> Watchers</p>
+        <p class="repo-info text-center h-5 p-3 mx-5"><span>{{repo.stargazers}}</span> Stars</p>
+      </div>
+    </div>
+  </div>
 </div>
