@@ -9,5 +9,7 @@ export class HttpProcessorService {
 
   constructor(private http:HttpClient) { }
 
-
+  fetchApi(url:string):Observable<any>{
+    return this.http.get(url+environment.apiKey);
+  }
 }
