@@ -14,7 +14,9 @@ export class LandingPageComponent implements OnInit {
   ngOnInit(): void {
   }
   userSearch() {
-    this.gitinfo.userApi(`https://api.github.com/users/${this.inputData}`)
+    console.log("dfsdfsd");
+    
+    this.gitinfo.userApi(`https://api.github.com/users/${this.inputData}`);
     this.router.navigate(['user'])
   }
   // repoSearch() {

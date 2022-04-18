@@ -1,25 +1,24 @@
 <div class="main-container container-fluid d-flex flex-column  justify-content-center align-items-center">
-    <div class="container main d-flex flex-column  justify-content-center align-items-center ">
-      <img src="../../assets/top-left.svg" class="top-left" alt="">
-      <div class="github-image">
-        <img src="../../assets/github-one.svg" class="github-one" alt="">
-      </div>
-      <div class="app-title">
-        <p class="display-3 mt-5">Github Search</p>
-      </div>
-      <form action="">
-        <div class="form-group search-space">
-          <input type="text" class="form-control p-3 input-space me-5 " placeholder="search users,repos ... " name="inputData" [(ngModel)] ='inputData' >
-          <button disabled>
-            <img src="../../assets/Union.svg" class="search-image" alt="">
-          </button>
-        </div>
-        <div class="form-group d-flex justify-content-center mt-5">
-          <button (click)="userSearch()" class="btn btn-outline-success me-3 first-buttons">Users</button>
-          <button class="btn btn-outline-success first-buttons">Repositories</button>
-        </div>
-      </form>
-      <img src="../../assets/botttom-right.svg" class="bottom-right" alt="">
+  <div class="container main d-flex flex-column  justify-content-center align-items-center ">
+    <img src="../../assets/top-left.svg" class="top-left" alt="">
+    <div class="github-image">
+      <img src="../../assets/github-one.svg" class="github-one" alt="">
     </div>
+    <div class="app-title">
+      <p class="display-3 mt-5">Github Search</p>
+    </div>
+    <form action="">
+      <div class="form-group search-space">
+        <input type="text" class="form-control p-3 input-space me-5 " placeholder="search users,repos ... " name="inputData" [(ngModel)] ='inputData' >
+        <button disabled>
+          <img src="../../assets/Union.svg" class="search-image" alt="">
+        </button>
+      </div>
+      <div class="form-group d-flex justify-content-center mt-5">
+        <button (click)="userSearch()" class="btn btn-outline-success me-3 first-buttons">Users</button>
+        <!-- <button (click)="repoSearch()" class="btn btn-outline-success first-buttons">Repositories</button> -->
+      </div>
+    </form>
+    <img src="../../assets/botttom-right.svg" class="bottom-right" alt="">
   </div>
-  
+</div>
