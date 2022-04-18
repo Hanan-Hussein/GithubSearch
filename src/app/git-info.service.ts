@@ -49,4 +49,17 @@ export class GitInfoService {
     })
 
   }
+  userRepoSearch(url: string) {
+    this.HttpProcessor.fetchApi(url).subscribe((response) => {
+      console.log(response)
+      let allReposList: any;
+      response.items.map((res: any) => {
+        allReposList = new UserRepo(res.name, res.description, res.homepage, res.owner.login, res.stargazers_count, res.watchers_count,
+          res.created_at, res.forks_count, res.html_url);
+        this.totalRepos.push(allReposList)
+      })
+      console.log(this.totalRepos);
+    })
+  }
+
 }
