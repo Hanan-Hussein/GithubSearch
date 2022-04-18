@@ -9,6 +9,8 @@
     </div>
     <div class="col-md-6">
       <p class="h4">{{detail.name}}</p>
+      <p class="desc">{{detail.description}}</p>
+
       <p class="lead">{{detail.bio}}</p>
       <p>{{detail.email}}</p>
       <div class="stats d-flex justify-content-between">
@@ -16,14 +18,22 @@
         <p><span class="numbers">{{detail.following}}</span> Following</p>
         <p><span class="numbers">{{detail.publicRepositories}}</span> Public Repositories</p>
       </div>
-      <p class="text-muted mb-3">Member since <span>2018</span></p>
+      <p class="text-muted mb-3">Member since <span> {{detail.creationDate|date}}</span></p>
     </div>
   </div>
   <!-- Repositories Section -->
-  <p class="h5 text-center mt-5">Latest Repositories</p>
+  <p class="h5 text-center mt-5" appUnknownSearch>Latest Repositories</p>
   <div class="container repositories-section " *ngFor="let repo of repo">
-    <div class="repository my-3 p-5 d-flex align-items-center justify-content-between text-center">
-      <p class="repo-name"><span>{{repo.name}}</span> Project</p>
+    <div class="repository my-3 p-2 d-flex align-items-center justify-content-between text-center">
+      <div class="d-flex flex-column align-items-start">
+        <p class="repo-name h6"><span>{{repo.name}}</span> Project</p>
+        <p>{{repo.description}}</p>
+        <p class="text-muted"><a href={{repo.htmlURL}} target="_blank" class="userLink">{{repo.htmlURL}}</a></p>
+        <p> Created {{repo.created_at|monthCounter}}</p>
+
+      </div>
+      <p class="viewer text-decoration-underline"><a href={{repo.htmlURL}} target="_blank" class="link_user">VIEW</a>
+
       <div class="d-flex justify-content-around">
         <p class="repo-info text-center h-5 p-3 mx-5"><span>{{repo.forks}}</span> Forks</p>
         <p class="repo-info text-center h-5 p-3 mx-5"><span>{{repo.watchers}}</span> Watchers</p>
