@@ -7,13 +7,13 @@ import { Router } from '@angular/router';
   styleUrls: ['./navigation-bar.component.css']
 })
 export class NavigationBarComponent implements OnInit {
-  inputData!:string;
+  inputData: string='';
   constructor(private gitinfo:GitInfoService,public router:Router) { }
 
   ngOnInit(): void {
   }
   userSearch() {
-    if(this.inputData===''){
+    if(this.inputData ===''){
       alert("Search field cannot be left empty");
 
       return;
@@ -26,7 +26,7 @@ export class NavigationBarComponent implements OnInit {
     this.router.navigate([''])
   }
   repoSearch() {
-    if(this.inputData===''){
+    if(this.inputData ===''){
       alert("Search field cannot be left empty");
 
       return;

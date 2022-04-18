@@ -7,8 +7,10 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class MonthCounterPipe implements PipeTransform {
 
   transform(value: any): any{
-    const seconds = Math.abs((value) / 1000);
-     
+    let todayDate: any = new Date();
+    let val:any  =new Date(value);
+    const seconds = Math.abs((todayDate - val)/1000);
+         
     const intervals:any = {
         'year': 31536000,
         'month': 2592000,
@@ -21,6 +23,8 @@ export class MonthCounterPipe implements PipeTransform {
     let counter;
     for (const i in intervals) {
         counter = Math.floor(seconds/ intervals[i]);
+        console.log(counter);
+        
         if (counter > 0)
             if (counter === 1) {
                 return counter + ' ' + i + ' ago'; // singular (1 day ago)

@@ -33,6 +33,7 @@
   .floaters {
     max-width: fit-content;
     height: 15%;
+    color:black;
     background-color: #CAF0F8;
   }
   
@@ -44,6 +45,7 @@
   .floater {
     max-width: fit-content;
     background-color: #CAF0F8;
+    color:black;
   
     height: 15%;
   }

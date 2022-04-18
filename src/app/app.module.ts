@@ -9,6 +9,8 @@ import { RepositoriesComponent } from './repositories/repositories.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { MonthCounterPipe } from './month-counter.pipe';
+import { UnknownSearchDirective } from './unknown-search.directive';
+import { ErrorPageComponent } from './error-page/error-page.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { MonthCounterPipe } from './month-counter.pipe';
     UserResultPageComponent,
     NavigationBarComponent,
     RepositoriesComponent,
-    MonthCounterPipe
+    MonthCounterPipe,
+    UnknownSearchDirective,
+    ErrorPageComponent
   ],
   imports: [
     BrowserModule,

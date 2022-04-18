@@ -8,7 +8,9 @@
           <div class="left">
             <p class="lead">{{rep.name}} Project</p>
             <p class="desc">{{rep.description}}</p>
-            <p class="text-muted">{{rep.cloneURL}}</p>
+            <p class="text-muted"><a href={{rep.cloneURL}} target="_blank" class="userLink">{{rep.cloneURL}}</a></p>
+
+              
             <p>By : {{rep.author}}</p>
             <p class="text-muted">Created {{rep.created_at|monthCounter}} </p>
             <p class="viewer text-decoration-underline"><a href={{rep.htmlURL}} target="_blank" class="link">VIEW</a>
