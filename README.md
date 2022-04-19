@@ -32,7 +32,7 @@ The figma designs are available here [figma](https://www.figma.com/file/Ww5GoPeY
 
 
 The live link is below:
-#### [live link](https://quotev.herokuapp.com/)
+#### [live link](https://github-search--opt.herokuapp.com/)
 
 ### Behaviour Driven Development
 * A user is able to search for unique github repositories
