@@ -26,7 +26,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ## Description
 
-Github is an Angular application that allows a user to query for particular users and their repositories ,the user is also allowed to search based on the specific repositories<br>
+GithubSearch is an Angular application that allows a user to query for particular users and their repositories ,the user is also allowed to search based on the specific repositories<br>
 The figma designs are available here [figma](https://www.figma.com/file/Ww5GoPeYp2HqDZKnvJ2um6/GitHub-Search?node-id=0%3A1)
 
 
